@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dl4qxnhn11iil"]
 
 [ext_resource type="Texture2D" uid="uid://dqtb6uck10t3f" path="res://assets/assets/art/characters/soccer-player.png" id="1_xwt18"]
+[ext_resource type="Script" uid="uid://c2tph1vilvfqo" path="res://scenes/Characters/player.gd" id="1_y7cse"]
 
 [sub_resource type="Animation" id="Animation_y7cse"]
 length = 0.001
@@ -35,10 +36,48 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3]
 }
 
+[sub_resource type="Animation" id="Animation_xwt18"]
+resource_name = "run"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_7xbc7"]
+resource_name = "tackle"
+length = 0.1
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [30]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7xbc7"]
 _data = {
 &"RESET": SubResource("Animation_y7cse"),
-&"idle": SubResource("Animation_8iw34")
+&"idle": SubResource("Animation_8iw34"),
+&"run": SubResource("Animation_xwt18"),
+&"tackle": SubResource("Animation_7xbc7")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rohb4"]
@@ -46,6 +85,9 @@ radius = 4.0
 height = 18.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1434091063]
+script = ExtResource("1_y7cse")
+control_scheme = 2
+speed = 80.0
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1006646361]
 texture = ExtResource("1_xwt18")
