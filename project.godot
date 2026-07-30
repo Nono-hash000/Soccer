@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 
 KeyUtils="*uid://bq52rohm435ll"
 
+[debug]
+
+gdscript/warnings/unused_signal=0
+
 [display]
 
 window/size/viewport_width=280
