@@ -104,6 +104,7 @@ radius = 4.0
 height = 18.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1434091063]
+collision_layer = 2
 script = ExtResource("1_y7cse")
 control_scheme = 2
 speed = 80.0
