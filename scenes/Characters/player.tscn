@@ -36,6 +36,41 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3]
 }
 
+[sub_resource type="Animation" id="Animation_5vcpl"]
+resource_name = "kick"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [49, 50, 51]
+}
+
+[sub_resource type="Animation" id="Animation_8u6hb"]
+resource_name = "prep_kick"
+length = 0.1
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [48]
+}
+
 [sub_resource type="Animation" id="Animation_ipnkg"]
 resource_name = "recover"
 length = 0.1
@@ -94,6 +129,8 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_y7cse"),
 &"idle": SubResource("Animation_8iw34"),
+&"kick": SubResource("Animation_5vcpl"),
+&"prep_kick": SubResource("Animation_8u6hb"),
 &"recover": SubResource("Animation_ipnkg"),
 &"run": SubResource("Animation_xwt18"),
 &"tackle": SubResource("Animation_7xbc7")
@@ -108,6 +145,7 @@ collision_layer = 2
 script = ExtResource("1_y7cse")
 control_scheme = 2
 speed = 80.0
+power = 70.0
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1006646361]
 texture = ExtResource("1_xwt18")
