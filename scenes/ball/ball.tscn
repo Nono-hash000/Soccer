@@ -69,6 +69,7 @@ radius = 4.0
 
 [node name="Ball" type="AnimatableBody2D" unique_id=451405486]
 collision_layer = 4
+sync_to_physics = false
 script = ExtResource("1_stoaj")
 
 [node name="BallSprite" type="Sprite2D" parent="." unique_id=480312299]
