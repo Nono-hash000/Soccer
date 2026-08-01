@@ -161,7 +161,7 @@ collision_layer = 2
 script = ExtResource("1_y7cse")
 control_scheme = 2
 speed = 80.0
-power = 70.0
+power = 150.0
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1006646361]
 texture = ExtResource("1_xwt18")
@@ -191,6 +191,7 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TeammateDetectionArea" unique_id=959515032]
+visible = false
 polygon = PackedVector2Array(0, -40, 280, -150, 330, -100, 330, 100, 280, 150, 0, 40)
 
 [node name="ShadowSprite" type="Sprite2D" parent="." unique_id=2026732152]
