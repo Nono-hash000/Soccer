@@ -2,7 +2,7 @@ class_name BallStateShot
 extends BallState
 
 const SHOT_SPRITE_SCALE := 0.8
-const SHOT_HEIGHT := 30
+const SHOT_HEIGHT := 5
 const DURATION_SHOT := 1000
 
 var time_since_shot := Time.get_ticks_msec()
